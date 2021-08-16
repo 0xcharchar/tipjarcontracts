@@ -1,0 +1,39 @@
+{
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "hardhat": "^2.6.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.2.0"
+  },
+  "name": "tipjarcontracts",
+  "description": "Different contracts for recieving tips. I want to help creators find new ways to fund themselves without relying on larger services.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xcharchar/tipjarcontracts.git"
+  },
+  "keywords": [
+    "solidity",
+    "tipjar",
+    "donations",
+    "tips",
+    "ethereum"
+  ],
+  "author": "0xcharchar",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/0xcharchar/tipjarcontracts/issues"
+  },
+  "homepage": "https://github.com/0xcharchar/tipjarcontracts#readme"
+}

@@ -1,0 +1,9 @@
+# _carefully_
+*.env
+.env
+
+*.swp
+node_modules
+artifacts
+cache
+deployments

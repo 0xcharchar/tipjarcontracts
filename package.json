@@ -4,10 +4,11 @@
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
-    "hardhat": "^2.6.0"
+    "hardhat": "^2.6.4"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.2.0"
+    "@openzeppelin/contracts": "^4.3.1",
+    "dotenv": "^10.0.0"
   },
   "name": "tipjarcontracts",
   "description": "Different contracts for recieving tips. I want to help creators find new ways to fund themselves without relying on larger services.",

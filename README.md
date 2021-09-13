@@ -6,7 +6,7 @@ Different contracts for recieving tips. I want to help creators find new ways to
 
 _Send tip -> get NFT_
 
-Inspired by POAP and Gitcoin Kudos. 
+Inspired by POAP and Gitcoin Kudos except that when the NFT is transferred, the new owner is "rugged".
 
 This contract uses the metadata extension (ERC721Metadata) to disincentivize buying credibility. This isn't a big concern for smaller creators but may be a concern if you are a larger creator.
 
@@ -19,9 +19,9 @@ This is the expected process that would be followed:
 ![Diagram showing Alice tipping you, receiving an NFT, and then selling that NFT to Bob](docs/TipJarNft.sol.png)
 
 1. Alice tips you with ETH
-2. As a thank you, an NFT is minted and assigned to Alice. The associated metadata is located at the 'tipper URI'.
+2. As a thank you, an NFT is minted and assigned to Alice. The associated metadata is located at the 'tipper URI ([sample](https://gateway.pinata.cloud/ipfs/QmYwionyNirUk8fHFNGGXo2eEgMLcjSAbTyw3CPPL6KNJD))'.
 3. At some point later, Alice decides to sell the NFT to Bob
-4. When Bob becomes an owner of the NFT, the `tokenURI` return value will now be located at the 'collector URI'.
+4. When Bob becomes an owner of the NFT, the `tokenURI` return value will now be located at the 'collector URI ([sample](https://gateway.pinata.cloud/ipfs/QmQP8ZDNMBw85hhNaWaFG9Mq4739DUCwf2AeiZGJVBCrFU))'.
 
 Any time the owner of a token is not the minter of the token, the 'collector URI' is used as the metadata resource.
 
@@ -47,6 +47,12 @@ Here is the JSON Metadata schema from [EIP-721](https://eips.ethereum.org/EIPS/e
     }
 }
 ```
+
+### Example on Ropsten network
+
+* Contract address: [0x5ebcaf4fbe342e58c55e145c3638f78bb925bc92](https://ropsten.etherscan.io/address/0x5ebcaf4fbe342e58c55e145c3638f78bb925bc92)
+* [Tipper metadata](https://gateway.pinata.cloud/ipfs/QmYwionyNirUk8fHFNGGXo2eEgMLcjSAbTyw3CPPL6KNJD)
+* [Collector metadata](https://gateway.pinata.cloud/ipfs/QmQP8ZDNMBw85hhNaWaFG9Mq4739DUCwf2AeiZGJVBCrFU)
 
 ### Caveats and words of warning
 

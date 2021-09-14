@@ -18,7 +18,7 @@
     "test": "test"
   },
   "scripts": {
-    "check": "if [ -n \"$(type slither)\" ]; then slither .; else echo \"slither not found\"; fi",
+    "check": "if [ -n \"$(type slither)\" ]; then slither --exclude-dependencies .; else echo \"slither not found\"; fi",
     "test": "npx hardhat test"
   },
   "repository": {

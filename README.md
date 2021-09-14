@@ -57,3 +57,11 @@ Here is the JSON Metadata schema from [EIP-721](https://eips.ethereum.org/EIPS/e
 ### Caveats and words of warning
 
 I have a number of tests but it isn't perfectly covered yet. I also have not done gas optimization. This is an alpha product, and not alpha in the fun way were you are making a bunch of money.
+
+## TipJarLeaderboard.sol
+
+_Your top tippers receive a kickback on each withdrawl_
+
+Inspired by [Twitch leaderboards](https://help.twitch.tv/s/article/leaderboards-guide) for Gifters and Cheerers. The goal is to provide an incentive for tipping higher amounts by providing a percentage of the tips back to the top of the leaderboard.
+
+**Absolutely alpha product, missing many tests**

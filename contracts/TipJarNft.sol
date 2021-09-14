@@ -24,7 +24,7 @@ contract TipJarNft is ERC721, Ownable {
     s_transferredUri = transferredUri;
   }
 
-  function changeMinimumTip (uint256 newMinTip) public onlyOwner {
+  function changeMinimumTip (uint256 newMinTip) external onlyOwner {
     s_minimumTip = newMinTip;
   }
 
@@ -34,13 +34,13 @@ contract TipJarNft is ERC721, Ownable {
     uint256 mintId = _tokenId.current();
     _tokenId.increment();
 
-    _safeMint(msg.sender, mintId);
     s_originalTipper[mintId] = msg.sender;
+    _safeMint(msg.sender, mintId);
 
     return mintId;
   }
 
-  function isTokenTransferred (uint256 tokenId) public view returns (bool) {
+  function isTokenTransferred (uint256 tokenId) external view returns (bool) {
     address tipper = s_originalTipper[tokenId];
     address owner = ownerOf(tokenId);
 
@@ -60,7 +60,9 @@ contract TipJarNft is ERC721, Ownable {
     }
   }
 
-  function withdraw(address payable _to) public onlyOwner {
+  function withdraw(address payable _to) external onlyOwner {
+    require(_to != address(0x0), "Must withdraw to a non-zero address");
+
     uint256 balance = address(this).balance;
     require(balance > 0, "No balance to withdraw");
     _to.transfer(balance);
